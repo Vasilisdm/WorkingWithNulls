@@ -5,7 +5,7 @@ namespace GameConsole
     {
         public int CalculateDamageReduction(int totalDamage)
         {
-            throw new NotImplementedException();
+            return 1;
         }
     }
 }
