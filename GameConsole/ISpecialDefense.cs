@@ -1,7 +1,7 @@
 ﻿using System;
 namespace GameConsole
 {
-    public interface ISpecialDefense
+    public interface ISpecialDefence
     {
         int CalculateDamageReduction(int totalDamage);
     }

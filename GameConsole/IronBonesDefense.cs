@@ -1,7 +1,7 @@
 ﻿using System;
 namespace GameConsole
 {
-    public class IronBonesDefense : ISpecialDefense
+    public class IronBonesDefence : ISpecialDefence
     {
         public int CalculateDamageReduction(int totalDamage)
         {
