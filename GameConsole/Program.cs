@@ -8,6 +8,11 @@ namespace GameConsole
         {
             PlayerCharacter player = new PlayerCharacter();
             player.Name = "vsl";
+            player.DaysSinceLastLogin = 42;
+
+            int days = player?.DaysSinceLastLogin ?? -1;
+
+            Console.WriteLine(days);
 
             PlayerDisplayer.Write(player);
         }
