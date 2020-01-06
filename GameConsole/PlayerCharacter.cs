@@ -3,15 +3,27 @@ namespace GameConsole
 {
     public class PlayerCharacter
     {
-        public string Name { get; set; }
-        public int? DaysSinceLastLogin { get; set; }
-        public DateTime? DateOfBirth { get; set; }
-        public bool? IsNoob { get; set; }
+        private readonly ISpecialDefence _specialDefence;
 
-        public PlayerCharacter()
+        public PlayerCharacter(ISpecialDefence specialDefence)
         {
-            DateOfBirth = null;
-            DaysSinceLastLogin = null;
+            _specialDefence = specialDefence;
+        }
+
+        public string Name { get; set; }
+        public int Health { get; set; } = 100;
+
+        public void Hit(int damage)
+        {
+            int damageReduction = 0;
+
+            damageReduction = _specialDefence.CalculateDamageReduction(damage);
+
+            int totalDamageTaken = damage - damageReduction;
+
+            Health -= totalDamageTaken;
+
+            Console.WriteLine($"{Name}'s health has been reduced by {totalDamageTaken} to {Health}");
         }
     }
 }
