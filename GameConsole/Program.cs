@@ -6,9 +6,9 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
-            PlayerCharacter orc = new PlayerCharacter(new IronBonesDefence());
-            PlayerCharacter mage = new PlayerCharacter(new DiamondSkinDefence());
-            PlayerCharacter dwarf = new PlayerCharacter(null);
+            PlayerCharacter orc = new PlayerCharacter(new IronBonesDefence()) { Name = "Undala" };
+            PlayerCharacter mage = new PlayerCharacter(new DiamondSkinDefence()) { Name = "Nuromancer" };
+            PlayerCharacter dwarf = new PlayerCharacter(null) { Name = "Balin" };
 
             orc.Hit(10);
             mage.Hit(10);
