@@ -1,0 +1,11 @@
+﻿using System;
+namespace GameConsole
+{
+    public class IronBonesDefense : ISpecialDefense
+    {
+        public int CalculateDamageReduction(int totalDamage)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
