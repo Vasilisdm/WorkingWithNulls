@@ -6,18 +6,15 @@ namespace GameConsole
     {
         static void Main(string[] args)
         {
-            PlayerCharacter[] players =
-            {
-                new PlayerCharacter {Name = "vsl"},
-                new PlayerCharacter(),
-                null
-            };
+            PlayerCharacter orc = new PlayerCharacter(new IronBonesDefence());
+            PlayerCharacter mage = new PlayerCharacter(new DiamondSkinDefence());
+            PlayerCharacter dwarf = new PlayerCharacter(null);
 
-            string p1 = players?[0]?.Name;
-            string p2 = players?[1]?.Name;
-            string p3 = players?[2]?.Name;
+            orc.Hit(10);
+            mage.Hit(10);
+            dwarf.Hit(10);
 
-
+            Console.ReadLine();
         }
     }
 }
