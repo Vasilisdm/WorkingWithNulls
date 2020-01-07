@@ -10,7 +10,7 @@ namespace GameConsole
             _specialDefence = specialDefence;
         }
 
-        public string Name { get; set; }
+        public string Name { get; set; } = "Sauron";
         public int Health { get; set; } = 100;
 
         public void Hit(int damage)
